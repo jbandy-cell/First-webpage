@@ -1,0 +1,132 @@
+/* Basic page setup */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    Font-family: Georgia, 'Times New Roman', Times, serif ;
+    line-height: 1.6;
+    Background-color: linear-gradient(135deg,#020b2b,#063b9e 55%, #071638) ;
+    Color: hsl(213, 100%, 82%);
+}
+
+/* Header */
+header {
+    Background: linear-gradient(90deg, #0648d8, #00aaff,#0648d8);
+    Color: #b3d4ff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+/* Main Flexbox layout */
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 24px;
+
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* Content cards */
+.card {
+    flex: 1 1 350px;
+    min-width: 0;
+    padding: 24px;
+    Background-color: #b2d5ff;
+    border-top: 5px solid #007bff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 70, 150, 0.15);
+    overflow-wrap: anywhere;
+}
+
+/* Headings */
+.card h2 {
+    Color: #00c8ff;
+    margin-top: 0;
+}
+
+.card h3 {
+    Color: #00c8ff;
+}
+
+/* List */
+.card ul {
+    padding-left: 24px;
+}
+
+.card li {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    Background-color: #55bfff;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Tablet: 768px and wider */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        gap: 24px;
+    }
+
+    .card {
+        flex: 1 1 300px;
+    }
+}
+
+/* Desktop: 1200px and wider */
+@media (min-width: 1200px) {
+    .container {
+        gap: 30px;
+        padding: 40px 30px;
+    }
+
+    .card {
+        flex: 1 1 0;
+    }
+}
+
+/* Mobile: 320px to 767px */
+@media (max-width: 767px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 20px 12px;
+        gap: 18px;
+    }
+
+    .card {
+        flex: 1 1 auto;
+        width: 100%;
+        padding: 18px;
+    }
+
+    footer {
+        padding: 18px 12px;
+    }
+}
